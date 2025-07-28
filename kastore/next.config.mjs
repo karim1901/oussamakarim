@@ -18,4 +18,18 @@ export default withPWA({
   dest: 'public',
   disable: isDev,
    // لتعطيل PWA في وضع التطوير
+
+
+
+   register: true,
+   skipWaiting: true,
+   // أضف هذا التكوين لتجاهل بعض الملفات
+   runtimeCaching: [
+     {
+       urlPattern: /\/_next\/app-build-manifest\.json$/,
+       handler: 'NetworkOnly' // تجاهل التخزين المسبق لهذا الملف
+     }
+   ]
 })
+
+
