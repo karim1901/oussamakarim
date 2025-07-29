@@ -15,8 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-
-
+        <link type="icon" href="/favicon.ico"/>
       </head>
       <body >
           <UserProvider>
